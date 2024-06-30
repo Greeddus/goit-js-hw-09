@@ -1,25 +1,73 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  list-style: none;
+  /* gap: 48px 24px; */
+}
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+.gallery-item {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+}
+
+.gallery-item:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+.feedback-form button {
+  display: block;
+  width: 86px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
   font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.feedback-form button:hover {
+  background-color: #45a049;
 }
